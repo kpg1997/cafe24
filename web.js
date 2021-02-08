@@ -39,7 +39,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.json());
 
 app.listen(8002, function () {
-    console.log('server running at http://127.0.0.1:52273');
+    console.log('server running at http://127.0.0.1:8002');
 });
 //미들웨어 장착
 // app.get('/', function (request, response) {
@@ -153,15 +153,18 @@ app.get('/login.html', function (request, response) {
         response.send(data);
     });
 });
-
+function send404Message(response) {
+    response.writeHead(404, { 'Content-Type': 'text' });
+    response.write('404에러');
+    response.end();
+}
 app.get('/location.html', function (request, response) {
-    // response.render('index');
-    // 파일을 읽습니다.
-    // fs.readFile(__dirname + '/location/location.html', 'utf8', function (error, data) {
-    //     response.send(data);
-    // });
-    response.writeHead(200,{'Content-Type':'text/html'});
-    fs.createReadStream(__dirname + '/location/location.html').pipe(response)
+    if (request.method == 'GET' && request.url == '/location.html') {
+        response.writeHead(200, { 'Content-Type': 'text' });
+        fs.createReadStream(__dirname +'/location/location.html').pipe(response);
+    } else {
+        send404Message(response);
+    }
 });
 
 app.get('/Terms-of-Service.html', function (request, response) {
