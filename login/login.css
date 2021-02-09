@@ -24,6 +24,12 @@ body{
 .menu-bar{
     display: none;
 }
+.login-title{
+    font-family: "main-font";
+    color: white;
+    font-size: 45px;
+    margin-top: 25px;
+}
 .btn-login{
     background-color: none;
     border-radius: 10px;

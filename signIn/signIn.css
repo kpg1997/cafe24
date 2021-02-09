@@ -18,6 +18,12 @@ body{
 .menu-bar ul ul li {
     background-color:   #181b33;;
 }
+.signup-title{
+    font-family: "main-font";
+    color: white;
+    font-size: 45px;
+    margin-top: 25px;
+}
 .join-form-panel{
     margin: auto;
     width: 600px;
