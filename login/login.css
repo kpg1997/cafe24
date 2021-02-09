@@ -42,7 +42,7 @@ body{
     color: rgb(242, 242, 255);
 }
 
-#header{
+.header{
     background-color:none;
     margin: 0;
     padding: 0;
@@ -80,10 +80,11 @@ body{
 }
 
 .header {
-    background-color:   #181b33;
+    background-color:   none;
+
 }
 .menu-bar ul ul li {
-    background-color:   #181b33;;
+    background-color:   #181b33;
 }
 .main-slogan{
     font-family: "main-font";
@@ -97,11 +98,13 @@ body{
     padding: 3px;
     text-align: center;
 }
-.form-title{
+
+.login-title{
     font-family: "main-font";
     font-size: 45px;
     padding-top: 15px;
     color:white;
+    padding-bottom: 25px;
 }
 
 .form-input,#login{
