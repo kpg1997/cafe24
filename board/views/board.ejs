@@ -18,6 +18,15 @@
       background-color: #181b33;
     }
 
+    .board-topline{
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    
+
     .menu-bar ul ul li {
       background-color: #181b33;
       ;
@@ -37,6 +46,7 @@
       margin-top: 170px;
       background-color: #181b33;
       margin-bottom: 25%;
+      border-radius: 15px;
     }
 
 
@@ -67,9 +77,12 @@
     }
 
     #write {
-      color: white;
+      color: rgb(0, 0, 0);
       width: 70px;
       cursor: pointer;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-color: ivory;
     }
 
     #write:hover {
@@ -79,13 +92,14 @@
     #searchbtn {
       margin-left: 3px;
       border: 0;
-      background-color: #181b33;
+      background-color: #ffffff;
       width: 45px;
       height: 30px;
       text-align: center;
       cursor: pointer;
-      color: white;
+      color: rgb(0, 0, 0);
       border-radius: 10px;
+      border: 2px solid black;
     }
 
     #search-panel {
@@ -128,6 +142,12 @@
       <form action="/searchBoard.html/1" method="post"><input type="text" placeholder="제목" name="searchBoard"
           id="search-panel"><button id="searchbtn">검색</button></form>
     </div>
+    <div class="board-topline">
+      <div class="topline-detail">No.</div>
+      <div class="topline-detail">제목</div>
+      <div class="topline-detail">작성자</div> 
+    </div>
+    
     <hr>
     <% for(let i=(page * page_num) - page_num;i < (page * page_num);i++){ if(i> leng){
       i++;
