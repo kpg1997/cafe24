@@ -12,11 +12,14 @@
     </title>
     <style>
         .header {
-    background-color:   #181b33;
-}
-.menu-bar ul ul li {
-    background-color:   #181b33;;
-}
+            background-color: #181b33;
+        }
+
+        .menu-bar ul ul li {
+            background-color: #181b33;
+            ;
+        }
+
         @font-face {
             src: url("/font");
             font-family: "main-font";
@@ -35,7 +38,8 @@
             box-shadow: 5px 5px 5px;
             padding: 15px;
             margin-top: 170px;
-            background-color:  #181b33;
+            background-color: #181b33;
+            margin-bottom: 20%;
         }
 
         .board-boardno,
@@ -56,8 +60,9 @@
             margin-left: 15px;
             color: white;
         }
+
         .button:hover {
-           font-weight: bold;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -73,7 +78,8 @@
         </div>
         <div class="board-userid">작성자 : <%=data[0].userid%>
         </div>
-        <div class="board-content">내용 :<br> <%=data[0].content%>
+        <div class="board-content">내용 :<br>
+            <%=data[0].content%>
         </div>
         <div class="buttons">
             <div onclick="list()" class="button">목록으로</div>
@@ -81,13 +87,14 @@
             <div onclick="deleteBoard()" class="button">삭제하기</div>
         </div>
     </div>
-
+    <footer id="total-footer"></footer>
     <script>
         function update() {
             location.href = '/updateBoard.html/<%=data[0].boardno%>';
         }
         function list() {
-            location.href = '/board.html';
+            // location.href = '/board.html/1';
+            history.back();
         }
         function deleteBoard() {
             var con = confirm('삭제하시겠습니까?');
@@ -97,6 +104,9 @@
         }
         $(document).ready(function () {
             $("#total-header").load("/header.html")
+        });
+        $(document).ready(function () {
+            $("#total-footer").load("/totalfooter.html")
         });
     </script>
 </body>

@@ -22,8 +22,9 @@
             border: 1px solid black;
             box-shadow: 5px 5px 5px;
             padding: 15px;
-            margin-top: 330px;
+            margin-top: 170px;
             background-color: #181b33;
+            margin-bottom: 20%;
         }
 
         .buttons {
@@ -75,7 +76,7 @@
 
 
     </div>
-
+    <footer id="total-footer"></footer>
     <script>
         function update() {
             var title = document.getElementById('tit').value;
@@ -91,6 +92,9 @@
         }
         $(document).ready(function () {
             $("#total-header").load("/header.html")
+        });
+        $(document).ready(function () {
+            $("#total-footer").load("/totalfooter.html")
         });
     </script>
 </body>
