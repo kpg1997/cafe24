@@ -15,6 +15,13 @@
     font-family: "main-font";
   }
 
+  .board-topline{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
   .qna-panel .qna-list div {
     display: inline-block;
   }
@@ -35,6 +42,7 @@
     margin-top: 170px;
     background-color: #181b33;
     margin-bottom: 25%;
+    border-radius: 15px;
   }
 
 
@@ -70,13 +78,26 @@
   }
 
   #write {
-    color: white;
+    color: rgb(0, 0, 0);
     width: 70px;
-    margin-left: auto;
-    margin-right: auto;
     cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: ivory;
   }
 
   #write:hover {
     font-weight: bold;
+  }
+
+  .num {
+    display: inline-block;
+    color: white;
+  }
+  .num a{
+    text-decoration: none;
+    color: white;
+  }
+  .num-panel{
+    text-align: center;
   }

@@ -23,6 +23,11 @@
             <form action="/searchQna.html/1" method="post"><input type="text" placeholder="제목" name="searchQna"
                     id="search-panel"><button id="searchbtn">검색</button></form>
         </div>
+        <div class="board-topline">
+            <div class="topline-detail">No.</div>
+            <div class="topline-detail">제목</div>
+            <div class="topline-detail">작성자</div> 
+          </div>
         <hr>
         <% for(let i=(page * page_num) - page_num;i < (page * page_num);i++){ if(i> leng){
             i++;
