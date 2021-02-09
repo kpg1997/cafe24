@@ -18,15 +18,6 @@
       background-color: #181b33;
     }
 
-    .board-topline{
-      color: white;
-      font-size: 20px;
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    
-
     .menu-bar ul ul li {
       background-color: #181b33;
       ;
@@ -46,7 +37,6 @@
       margin-top: 170px;
       background-color: #181b33;
       margin-bottom: 25%;
-      border-radius: 15px;
     }
 
 
@@ -77,12 +67,9 @@
     }
 
     #write {
-      color: rgb(0, 0, 0);
+      color: white;
       width: 70px;
       cursor: pointer;
-      border: 2px solid black;
-      border-radius: 10px;
-      background-color: ivory;
     }
 
     #write:hover {
@@ -92,14 +79,13 @@
     #searchbtn {
       margin-left: 3px;
       border: 0;
-      background-color: #ffffff;
+      background-color: #181b33;
       width: 45px;
       height: 30px;
       text-align: center;
       cursor: pointer;
-      color: rgb(0, 0, 0);
+      color: white;
       border-radius: 10px;
-      border: 2px solid black;
     }
 
     #search-panel {
@@ -129,6 +115,13 @@
     .num-panel{
       text-align: center;
     }
+    .board-topline{
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
   </style>
 </head>
 
@@ -136,7 +129,6 @@
   <div class="header">
     <header id="total-header"></header>
   </div>
-  
   <div class="board-panel">
     <div class="main-title"> Board</div>
     <div style="margin-bottom: 12px;margin-top: 12px;">
@@ -148,7 +140,6 @@
       <div class="topline-detail">제목</div>
       <div class="topline-detail">작성자</div> 
     </div>
-    
     <hr>
     <% for(let i=(page * page_num) - page_num;i < (page * page_num);i++){ if(i> leng){
       i++;

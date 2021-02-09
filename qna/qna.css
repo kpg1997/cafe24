@@ -9,19 +9,25 @@
     z-index: -1000;
     overflow: hidden;
 }
+.board-topline{
+  color: white;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.header {
+  background-color:   #181b33;
+}
+.menu-bar ul ul li {
+  background-color:   #181b33;;
+}
 
 @font-face {
     src: url("/font");
     font-family: "main-font";
   }
 
-  .board-topline{
-    color: white;
-    font-size: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
   .qna-panel .qna-list div {
     display: inline-block;
   }
@@ -41,8 +47,7 @@
     padding: 15px;
     margin-top: 170px;
     background-color: #181b33;
-    margin-bottom: 25%;
-    border-radius: 15px;
+    margin-bottom: 12%;
   }
 
 
@@ -78,18 +83,14 @@
   }
 
   #write {
-    color: rgb(0, 0, 0);
+    color: white;
     width: 70px;
     cursor: pointer;
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: ivory;
   }
 
   #write:hover {
     font-weight: bold;
   }
-
   .num {
     display: inline-block;
     color: white;

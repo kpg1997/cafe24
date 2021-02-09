@@ -132,12 +132,20 @@ body{
     padding-top: 60px;
     font-size: 60px;
     color: white;
+    text-shadow:2px 6px 2px black; 
 }
 
 .map-area{
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    /* align-items: center; */
+    height: 400px;
 
+}
+.root{
+    width:650px;
+    margin: auto;
+    padding-left: 13px;
+    color: white;
+    border-left: 3px solid black;
 }

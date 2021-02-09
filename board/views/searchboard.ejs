@@ -66,6 +66,14 @@
       text-align: right;
     }
 
+    .board-topline {
+      color: white;
+      font-size: 20px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
     #write {
       color: white;
       width: 70px;
@@ -103,15 +111,18 @@
       background-image: url('/boardimage');
       background-size: cover;
     }
+
     .num {
       display: inline-block;
       color: white;
     }
-    .num a{
+
+    .num a {
       text-decoration: none;
       color: white;
     }
-    .num-panel{
+
+    .num-panel {
       text-align: center;
     }
   </style>
@@ -127,6 +138,12 @@
       <form action="/searchBoard.html/1" method="post"><input type="text" placeholder="제목" name="searchBoard"
           id="search-panel"><button id="searchbtn">검색</button></form>
     </div>
+    <div class="board-topline">
+      <div class="topline-detail">No.</div>
+      <div class="topline-detail">제목</div>
+      <div class="topline-detail">작성자</div>
+    </div>
+    <hr>
     <hr>
     <% for(let i=(page * page_num) - page_num;i < (page * page_num);i++){ if(i> leng){
       i++;
@@ -146,14 +163,14 @@
       </div>
       <hr>
       <% }} %>
-      <div class="num-panel">
-        <% for(var j=0; j < data.length / page_num; j++){ %>
-          <div class="num" id="<%=j+1%>">[<a href="/searchBoard.html/<%=search%>/<%= j + 1 %>">
-            <%= j + 1 %>
-          </a>]</div>
-          <% } %>
+        <div class="num-panel">
+          <% for(var j=0; j < data.length / page_num; j++){ %>
+            <div class="num" id="<%=j+1%>">[<a href="/searchBoard.html/<%=search%>/<%= j + 1 %>">
+                <%= j + 1 %>
+              </a>]</div>
+            <% } %>
         </div>
-            <div onclick="writeForm()" id="write">작성하기</div>
+        <div onclick="writeForm()" id="write">작성하기</div>
   </div>
   <footer id="total-footer"></footer>
   <script>
