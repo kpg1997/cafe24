@@ -38,7 +38,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(bodyParser.json());
 
-app.listen(8020, function () {
+app.listen(8002, function () {
     console.log('server running at http://127.0.0.1:8002');
 });
 //미들웨어 장착
@@ -258,7 +258,15 @@ app.get('/index', function (request, response) {
 });
 
 
-
+app.get('/agree.html', function (request, response) {
+    // response.render('index');
+    // 파일을 읽습니다.
+    fs.readFile(__dirname + '/signIn/agree.html', 'utf8', function (error, data) {
+        // 응답합니다.
+        console.log(__dirname + '/signIn/agree.html');
+        response.send(data);
+    });
+});
 app.get('/signIn.html', function (request, response) {
     // response.render('index');
     // 파일을 읽습니다.

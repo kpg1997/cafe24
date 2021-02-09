@@ -21,7 +21,7 @@ function login() {
     }
 }
 function join() {
-    location.href = "/signIn.html";
+    location.href = "/agree.html";
 }
 function find(num) {
     if (num == 1) {
