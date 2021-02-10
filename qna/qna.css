@@ -41,6 +41,9 @@
     font-family: "main-font";
   }
 
+  #search-panel{
+    height: 25px;
+  }
   .qna-panel .qna-list div {
     display: inline-block;
   }

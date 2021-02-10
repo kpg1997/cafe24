@@ -37,6 +37,8 @@
             margin-top: 170px;
             margin-bottom: 20%;
             background-color: #181b33;
+            opacity: 0.9;
+            border-radius: 10px;
         }
 
         #videobcg {
@@ -97,7 +99,7 @@
         <source src="/qnabg">
     </video>
     <div class="qna-detail-panel">
-        <div class="qna-qnano">글 번호 : <%=data[0].No%>
+        <div class="qna-qnano">No : <%=data[0].No%>
         </div>
         <div class="qna-title">글 제목 : <%=data[0].title%>
         </div>
@@ -110,7 +112,7 @@
         </div>
         <%if(data[0].adcomment !=undefined){%>
             <hr style="margin-top: 10px;">
-            <div class="adreply" style="margin-top: 10px;">관리자 : <%=data[0].adcomment%>
+            <div class="adreply" style="margin-top: 10px;">관리자 답변: <br><%=data[0].adcomment%>
             </div>
             <%}%>
                 <div class="buttons">

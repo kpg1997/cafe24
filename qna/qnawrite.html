@@ -29,6 +29,8 @@
             padding: 15px;
             margin-top: 170px;
             background-color: #181b33;
+            opacity: 0.9;
+            border-radius: 10px;
         }
 
         .buttons {
@@ -49,6 +51,28 @@
         .user,
         .con {
             color: white;
+        }
+        .ti{
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .user{
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .con{
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: center;
+        }
+        #qnatitle{
+            font-size: 25px;
+            border-radius: 10px;
+        }
+        #qnacontent{
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 10px;
         }
         #videobcg {
     
@@ -78,8 +102,8 @@
 
             <div class="ti">제목 : <input type="text" name="title" id="qnatitle"></div>
             <div class="user">작성자 : <%=data%><input type="hidden" name="userid" id="qnawrite" value="<%=data%>"></div>
-            <div class="con">내용 :<br> <textarea type="text" name="article" id="qnacontent" cols="100"
-                    rows="10"></textarea></div>
+            <div class="con"><br> <textarea type="text" name="article" id="qnacontent" cols="95"
+                    rows="10" placeholder="내용을 입력하세요"></textarea></div>
 
         </form>
         <div class="buttons">
