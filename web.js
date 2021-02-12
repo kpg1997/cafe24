@@ -577,7 +577,8 @@ app.post('/forgotId', function (request, response) {
             console.log('results.userid!!!!', results);
             if (results.length == 1) {
                 response.send(ejs.render(data, {
-                    data: results
+                    data: results[0].userid,
+                    data2:''
                 }));
             } else {
                 response.send("<script>alert('존재하지 않는 아이디 입니다.');history.back()</script>");
@@ -601,7 +602,8 @@ app.post('/forgotPwd', function (request, response) {
             console.log('results.userid!!!!', results);
             if (results.length == 1) {
                 response.send(ejs.render(data, {
-                    data: results
+                    data: '',
+                    data2:results[0].userpwd
                 }));
             } else {
                 response.send("<script>alert('존재하지 않는 비밀번호 입니다.');history.back()</script>");
